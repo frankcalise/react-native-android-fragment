@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.view.View;
 import android.view.ViewStub;
 import android.os.Bundle;
-import android.widget.RelativeLayout;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
