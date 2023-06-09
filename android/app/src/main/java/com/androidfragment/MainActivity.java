@@ -5,7 +5,10 @@ import android.app.Application;
 import android.widget.FrameLayout;
 import android.widget.Button;
 import android.view.View;
+import android.view.ViewStub;
 import android.os.Bundle;
+import android.widget.RelativeLayout;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
@@ -33,6 +36,8 @@ public class MainActivity extends ReactActivity {
     mButton = findViewById(R.id.button);
     mButton.setOnClickListener(new View.OnClickListener() {
       public void onClick(View v) {
+        ViewStub containerStub = findViewById(R.id.reactNativeContainer);
+        containerStub.inflate();
         Fragment reactNativeFragment = new ReactFragment.Builder()
                 .setComponentName("AndroidFragment")
                 .setLaunchOptions(getLaunchOptions("test message"))

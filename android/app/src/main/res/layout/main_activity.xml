@@ -4,18 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MyActivity">
-
-    <FrameLayout
-        android:id="@+id/reactNativeFragment"
+    
+    <RelativeLayout
+        android:id="@+id/nativeContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/button"/>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:text="Display React Native Fragment"/>
-
+        android:layout_height="match_parent">
+        
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Display React Native Fragment"/>
+        
+        <ViewStub
+            android:id="@+id/reactNativeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/button"
+            android:layout="@layout/fragment_container" />
+    </RelativeLayout>
 </RelativeLayout>
