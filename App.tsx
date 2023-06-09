@@ -63,7 +63,9 @@ function App(): JSX.Element {
   };
 
   return (
-    <View style={[backgroundStyle, {flex: 1}]}>
+    <View
+      onLayout={() => console.log('on layout', new Date())}
+      style={[backgroundStyle, {flex: 1}]}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
